@@ -1,0 +1,68 @@
+---
+title: "scRNA-Seq Analysis"
+subtitle: "Hands-On Excercises"
+author: "Åsa Björklund"
+date: "`r format(Sys.Date(),format='%d-%b-%Y')`"
+output:
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    theme: united
+    highlight: tango
+    df_print: paged
+    code_folding: "none"
+    self_contained: false
+    keep_md: false
+    encoding: "UTF-8"
+    css: ["assets/course.css"]
+---
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE,results='hide'}
+# run setup code
+source("assets/setup.R")
+#knitr::opts_chunk$set(fig.height=4,fig.width=6)
+```
+
+```{r,echo=FALSE,results='hide'}
+library(ggplot2)
+library(dplyr)
+```
+
+<img src="assets/logo.svg" alt="logo_raukr" class="trlogo">
+
+---
+
+<p class="abstract">
+This is the hands-on material for **single-cell RNASeq analyses**. These are series of excercises to help you get started with reproducible research using R. The code is hidden by default. Click on the 'Code' button on the right side to show the code. You can consult the R Markdown cheatsheet for quick reference.
+</p>
+
+---
+
+# Introduction
+
+<Some intro here to scRNA-Seq>
+
+# Labs
+
+## Seurat
+
+Single-cell RNA-seq data workflow with Seurat including filtering, QC and clustering. Click [here](seurat_analysis.html).
+
+## Scater
+
+Single-cell RNA-seq data workflow and QC with Scater package. Click [here](scater_ilc.html).
+
+## SC3
+
+Single-cell RNA-seq concensus clustering and more with SC3 package. Click [here](sc3_ilc.html).
+
+```{r, echo=FALSE, child="assets/session.Rmd"}
+```
+
+```{r, echo=FALSE, child="assets/build.Rmd"}
+```
+
+```{r, echo=FALSE, child="assets/footer.Rmd"}
+```
